@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 44, 61);
+    animation: animateBG 15s infinite;
+}
+
+.container{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.bulan {
+    width: 150px;
+    height: 150px;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px lightyellow,
+                0 0 15px lightyellow,
+                0 0 50px lightyellow,
+                0 0 100px lightyellow;
+}
+
+.bayangan {
+    margin-left: 60px;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: animasi 15s infinite;
+}
+
+@keyframes animasi{
+    0%{
+        margin-left: 60px;
+    }
+    50%{
+        margin-left: -150px;
+    }
+    100%{
+        margin-left: 50px;
+    }
+}
+
+@keyframes animateBG{
+    0%{
+        background-color: rgb(51, 44, 61);
+    }
+    50%{
+        background-color: rgb(18, 16, 22);
+    }
+}
+
+
+@media (max-width:550px){
+    .bulan{
+        width: 100px;
+        height: 100px;
+    }
+    .bayangan{
+        width: 100px;
+        height: 100px;
+    }
+
+    @keyframes animasi{
+        0%{
+            margin-left: 60px;
+        }
+        50%{
+            margin-left: -100px;
+        }
+        100%{
+            margin-left: 50px;
+        }
+    }
+}
